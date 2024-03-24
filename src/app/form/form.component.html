@@ -1,0 +1,20 @@
+<p>form works!</p>
+<div class="container py-5">
+    <h2 class="text-center">Template-Driven Form</h2>
+
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+        <div class="mt-3">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="product.name" required>
+        </div>
+        <div class="mt-3">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="product.email" required email>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+
+    <p class="pt-5">
+        {{product}}
+    </p>
+</div>
